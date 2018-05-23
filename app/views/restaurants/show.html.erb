@@ -1,0 +1,19 @@
+<div class="container text-center">
+      <div class="row">
+      <h1><%= @restaurant.name %></h1>
+      <h4><%= @restaurant.category %></h4>
+      <p>
+        <%= @restaurant.address %><br>
+        <%= @restaurant.phone_number %>
+      </p>
+    </div>
+    <h5>User Review</h5>
+  <p>
+  <% @restaurant.reviews.each do  |review| %>
+   <%= review.content %> --- Rating <%= review.rating %><br>
+   <% end %>
+  </p>
+
+  <%= link_to "Rating", new_restaurant_review_path(@restaurant), :class => "btn btn-primary" %><i class="fas fa-search"></i>
+
+</div>

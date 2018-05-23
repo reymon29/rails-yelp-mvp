@@ -1,0 +1,15 @@
+<div class="container text-center">
+    <div>
+      <h1>Le Wagon Yelp</h1>
+      <br>
+      <div class="row">
+      <h2>List of Resturants</h2>
+      <ul>
+        <% @restaurants.each do |restaurant| %>
+          <li class="list-unstyled"> <%= link_to restaurant.name, restaurant_path(restaurant) %> ---> Food type: <%= restaurant.category %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
