@@ -15,6 +15,13 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def avg
+    @review.restaurant = Restaurant.find(params[:restaurant_id])
+    sum = Review.where(:restaurant_id => params[:restaurant_id]).sum(:rating)
+    count = Review.where(:restaurant_id => params[:restaurant_id]).count(:rating)
+    average = sum / count
+  end
+
   private
 
   def review_params
