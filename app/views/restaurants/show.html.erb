@@ -9,8 +9,8 @@
       </p>
     </div>
     <h5>User Review</h5>
-  <% @average = Review.where(:restaurant_id => @restaurant.id).average(:rating)  %>
-  <p> Avg Stars: <%= '*' * @average.to_i   %>
+
+  <p> Avg Stars: <%= average.to_i   %>
 
 
   </p>
