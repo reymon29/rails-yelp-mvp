@@ -4,8 +4,4 @@ class Restaurant < ApplicationRecord
   validates :address, presence: true
   validates :category, inclusion: { in: ["chinese", "italian", "japanese", "french", "belgian"]}
 
-  def review_average
-    @ratings = reviews.pluck(:rating)
-
-  end
 end

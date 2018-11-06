@@ -1,6 +1,7 @@
 <h1>New Restaurant</h1>
 <%= simple_form_for [@restaurant] do |f| %>
     <% if @restaurant.errors.any? %>
+
   <% end %>
   <%= f.input :name %>
   <%= f.input :address %>
